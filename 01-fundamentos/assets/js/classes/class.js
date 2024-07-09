@@ -34,7 +34,7 @@ const ironman = new Persona ('Tony Stark', 'Ironman', 'Yo soy Ironman');
 pedro.miFrase();
 //ironman.miFrase();
 
-pedro.setComidaFavorita = 'Costillas de Brontosaurio'
+pedro.setComidaFavorita = 'Costillas de Brontosaurio';
 
 console.log( pedro.getComidaFavorita  );
 
