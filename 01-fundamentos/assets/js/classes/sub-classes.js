@@ -44,33 +44,24 @@ class Persona {
     }
 }
 
-const pedro = new Persona ('Pedro Picapiedra' , 'Pedro', 'yabadabadu');
+class Heroe extends Persona{
+
+    clan = 'Sin Clan';
+
+    constructor(nombre, codigo, frase) {
+        super(nombre, codigo, frase);
+        this.clan = 'Los Bufalos Mojados';
+    }
+    quienSoy(){
+        console.log(`Soy ${this.nombre}, ${this.clan}`);
+        super.quienSoy();
+    }
+}
+
+
+const pedro = new Heroe('Pedro Picapiedra' , 'Pedro', 'yabadabadu');
 //const ironman = new Persona ('Tony Stark', 'Ironman', 'Yo soy Ironman');
 
 
-pedro.miFrase();
-//ironman.miFrase();
-
-pedro.setComidaFavorita = 'Costillas de Brontosaurio';
-
-console.log( pedro.getComidaFavorita  );
-
 console.log( pedro );
-
-//Persona._conteo = 2;
-
-console.log('conteo estatico', Persona._conteo);
-
-console.log(Persona.conteo);
-
-Persona.mensaje();
-
-Persona.propiedadExterna = 'Hola Mundo';
-
-console.log( Persona.propiedadExterna );
-console.log( Persona );
-
-
-// 50 barras fierro de media ==> 
-// 45 barras fierro de 3/8 ==>
-// 50 barras fierro de 1/4 ==>
+pedro.quienSoy();
